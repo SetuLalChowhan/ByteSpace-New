@@ -1,15 +1,20 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Marquee from "react-fast-marquee";
-import b1 from "@/assets/b1.png";
-import b2 from "@/assets/b2.png";
-import b3 from "@/assets/b3.png";
-import b4 from "@/assets/b4.png";
-import b5 from "@/assets/b5.png";
+import b1 from "@/assets/brand/b1.png";
+import b2 from "@/assets/brand/b2.png";
+import b3 from "@/assets/brand/b3.png";
+import b4 from "@/assets/brand/b4.png";
+import b5 from "@/assets/brand/b5.png";
 
-const brandLogos = [
+interface BrandLogo {
+  src: StaticImageData;
+  alt: string;
+}
+
+const brandLogos: BrandLogo[] = [
   { src: b1, alt: "Logoipsum Wave" },
   { src: b2, alt: "Logoipsum Sunburst" },
   { src: b3, alt: "Logoipsum Lightning" },
@@ -24,9 +29,9 @@ interface BrandSectionProps {
 const BrandSection: React.FC<BrandSectionProps> = ({ className = "" }) => {
   return (
     <section
-      className={`w-full bg-white py-10 sm:py-14 md:py-16 section-padding-x overflow-hidden ${className}`}
+      className={`w-full bg-white py-10 sm:py-14 md:py-16 overflow-hidden ${className}`}
     >
-      <div className="w-full ">
+      <div className="w-full Container section-padding-x">
         <Marquee
           speed={40}
           pauseOnHover={true}
@@ -34,7 +39,7 @@ const BrandSection: React.FC<BrandSectionProps> = ({ className = "" }) => {
           gradient={false}
           className="flex items-center overflow-hidden"
         >
-          {brandLogos.map((brand, index) => (
+          {brandLogos.map((brand: BrandLogo, index: number) => (
             <div
               key={index}
               className="mx-6 sm:mx-10 md:mx-14 lg:mx-16 flex items-center justify-center shrink-0"

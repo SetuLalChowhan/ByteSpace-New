@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import Hero from "@/components/site/layout/Hero";
-import BrandSection from "@/components/site/layout/BrandSection";
-import DIscoverSection from "@/components/site/layout/DIscoverSection";
+import Hero from "@/components/site/layout/Hero/Hero";
+import BrandSection from "@/components/site/layout/BrandSection/BrandSection";
+import DIscoverSection from "@/components/site/layout/DiscoverSection/DIscoverSection";
+import ExploreDiversSection from "@/components/site/layout/ExploreDiverSection/ExploreDiversSection";
+import ProfessinalSection from "@/components/site/layout/ProfessionalSection/ProfessionalSection";
+import ReviewSection from "@/components/site/layout/reviewSection/ReviewSection";
+import CtaSection from "@/components/site/layout/CtaSection/CtaSection";
+import { MotionSection } from "@/components/common/MotionWrapper";
 
 export const metadata: Metadata = {
   title: "ByteSpace - Get Access to Hundreds Courses Available",
@@ -25,10 +30,26 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <main className="w-full Container">
+    <main className="w-full">
       <Hero />
-      <BrandSection />
-      <DIscoverSection />
+      <MotionSection>
+        <BrandSection />
+      </MotionSection>
+      <MotionSection>
+        <DIscoverSection />
+      </MotionSection>
+      <MotionSection>
+        <ExploreDiversSection />
+      </MotionSection>
+      <MotionSection>
+        <ProfessinalSection />
+      </MotionSection>
+      <MotionSection>
+        <CtaSection />
+      </MotionSection>
+      <MotionSection>
+        <ReviewSection />
+      </MotionSection>
     </main>
   );
 };

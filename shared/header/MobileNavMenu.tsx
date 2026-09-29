@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/shared/logo.png";
 import { ShopSvg } from "@/components/common/CustomSvg";
 
 interface NavItem {
@@ -99,11 +99,10 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
                     key={item.label}
                     href={item.href}
                     onClick={onClose}
-                    className={`text-base px-4 py-2.5 rounded-xl transition-colors ${
-                      item.active
-                        ? "font-medium text-[#F5F5F6] bg-white/15"
-                        : "font-normal text-[#F5F5F6]/90 hover:text-white hover:bg-white/10"
-                    }`}
+                    className={`text-base px-4 py-2.5 rounded-xl transition-colors ${item.active
+                      ? "font-medium text-[#F5F5F6] bg-white/15"
+                      : "font-normal text-[#F5F5F6]/90 hover:text-white hover:bg-white/10"
+                      }`}
                   >
                     {item.label}
                   </Link>
@@ -112,29 +111,17 @@ const MobileNavMenu: React.FC<MobileNavMenuProps> = ({
             </div>
 
             {/* Bottom Actions */}
-            <div className="pt-6 border-t border-white/15 flex flex-col gap-3">
+            <div className="pt-6  flex flex-col gap-3">
+
               <Link
-                href="/cart"
-                onClick={onClose}
-                className="flex items-center justify-between px-4 py-3 rounded-xl bg-white/10 text-[#F5F5F6] font-medium hover:bg-white/15 transition-colors"
-              >
-                <span className="flex items-center gap-2">
-                  <ShopSvg className="w-5 h-5 fill-current" />
-                  Cart
-                </span>
-                <span className="text-xs bg-[#d4fb20] text-textPrimary px-2 py-0.5 rounded-full font-bold">
-                  0
-                </span>
-              </Link>
-              <Link
-                href="/signin"
+                href="/login"
                 onClick={onClose}
                 className="w-full text-center py-3 rounded-full border border-white/20 text-[#F5F5F6] font-medium hover:bg-white/10 transition-colors"
               >
                 Sign In
               </Link>
               <Link
-                href="/join"
+                href="/register"
                 onClick={onClose}
                 className="w-full text-center py-3 rounded-full bg-[#d4fb20] text-textPrimary font-medium hover:brightness-105 transition-all shadow-md"
               >

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-interface TypographyProps {
+export interface TypographyProps {
   className?: string;
   children: ReactNode;
 }
@@ -32,15 +32,25 @@ export const Title44 = ({ className = "", children }: TypographyProps) => {
 };
 
 /**
+ * Title20 (Heading XS): Poppins 20px, 600 weight, 120% line-height, -0.2px tracking
+ */
+export const Title20 = ({ className = "", children }: TypographyProps) => {
+  return (
+    <h3
+      className={`font-poppins text-[20px] font-semibold leading-[120%] tracking-[-0.2px] text-black ${className}`}
+    >
+      {children}
+    </h3>
+  );
+};
+
+/**
  * Title18 (Body L / Subtitle): Defaults to body Satoshi font
  */
 export const Title18 = ({ className = "", children }: TypographyProps) => {
-  const hasCustomColor = className.includes("text-");
   return (
     <p
-      className={`text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] font-normal leading-[160%] ${
-        hasCustomColor ? "" : "text-[#E5E6E8]"
-      } text-center ${className}`}
+      className={`${className} font-satoshi text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] font-normal leading-[160%] text-[#E5E6E8] text-center `}
     >
       {children}
     </p>
@@ -53,7 +63,33 @@ export const Title18 = ({ className = "", children }: TypographyProps) => {
 export const Title16 = ({ className = "", children }: TypographyProps) => {
   return (
     <span
-      className={`text-[15px] sm:text-[16px] font-normal leading-[160%] text-[#F5F5F6] ${className}`}
+      className={`font-satoshi text-[15px] sm:text-[16px] font-normal leading-[160%] text-[#F5F5F6] ${className}`}
+    >
+      {children}
+    </span>
+  );
+};
+
+/**
+ * Title14 (Body S / Footer link): Defaults to body Satoshi font 14px
+ */
+export const Title14 = ({ className = "", children }: TypographyProps) => {
+  return (
+    <span
+      className={`font-satoshi text-[14px] font-normal leading-[160%] text-[#242528] ${className}`}
+    >
+      {children}
+    </span>
+  );
+};
+
+/**
+ * Title12 (Body XS / Label XS): Defaults to body Satoshi font 12px
+ */
+export const Title12 = ({ className = "", children }: TypographyProps) => {
+  return (
+    <span
+      className={`font-satoshi text-[12px] font-normal leading-[160%] text-[#4F4F4F] ${className}`}
     >
       {children}
     </span>
