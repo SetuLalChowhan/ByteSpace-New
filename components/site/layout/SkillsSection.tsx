@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Title44, Title18 } from "@/components/common/Typho";
+import SectionHeader from "@/components/common/SectionHeader";
 
 const skills = [
   "Featured",
@@ -35,21 +35,16 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ className = "" }) => {
     <section
       className={`w-full flex flex-col items-center text-center ${className}`}
     >
-      {/* Heading M (Poppins 44px, 600 weight, 120% line-height, #040819) */}
-      <Title44>
-        Discover Your Passion,
-        <br />
-        Build Your Skills
-      </Title44>
-
-      {/* Subtitle (Title18 with #82868E color) */}
-      <div className="mt-3.5 sm:mt-4 max-w-[860px] mx-auto px-2">
-        <Title18 className="text-[#82868E]">
-          At Bytespace Courses, we bring you closer to life-changing knowledge.
-          Explore a variety of courses across different fields, from technology
-          to the arts, and make a difference in your career and life.
-        </Title18>
-      </div>
+      <SectionHeader
+        title={
+          <>
+            Discover Your Passion,
+            <br />
+            Build Your Skills
+          </>
+        }
+        subtitle="At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life."
+      />
 
       {/* Skills Category Chips */}
       <div className="mt-8 sm:mt-10 md:mt-12 w-full max-w-[1260px] mx-auto flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 md:gap-3.5">
@@ -60,11 +55,10 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ className = "" }) => {
               key={skill}
               type="button"
               onClick={() => setActiveSkill(skill)}
-              className={`text-[15px] sm:text-[16px] font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-200 cursor-pointer ${
-                isActive
-                  ? "bg-primary text-textPrimary shadow-sm"
-                  : "bg-[#F5F5F6] text-[#4B4C53] hover:bg-[#ebebed]"
-              }`}
+              className={`text-[15px] sm:text-[16px] font-medium px-4 sm:px-5 py-2 sm:py-2.5 rounded-full transition-all duration-200 cursor-pointer ${isActive
+                ? "bg-primary text-textPrimary shadow-sm"
+                : "bg-[#F5F5F6] text-[#4B4C53] hover:bg-[#ebebed]"
+                }`}
             >
               {skill}
             </button>
