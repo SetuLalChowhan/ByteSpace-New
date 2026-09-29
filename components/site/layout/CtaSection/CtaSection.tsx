@@ -24,7 +24,7 @@ const CtaSection: React.FC<CtaSectionProps> = ({ className = "" }) => {
             </div>
 
             {/* Inner Content */}
-            <div className="relative z-10 w-full section-padding-x py-14 sm:py-18 md:py-24 flex flex-col items-center justify-center text-center">
+            <div className="relative z-10 w-full Container section-padding-x py-14 sm:py-18 md:py-24 flex flex-col items-center justify-center text-center">
                 {/* Title */}
                 <Title44 className="text-[#F5F5F6] max-w-[800px]">
                     Unlock Your Potential as a

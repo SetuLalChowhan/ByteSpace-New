@@ -24,9 +24,9 @@ interface BrandSectionProps {
 const BrandSection: React.FC<BrandSectionProps> = ({ className = "" }) => {
   return (
     <section
-      className={`w-full bg-white py-10 sm:py-14 md:py-16 section-padding-x overflow-hidden ${className}`}
+      className={`w-full bg-white py-10 sm:py-14 md:py-16  overflow-hidden ${className}`}
     >
-      <div className="w-full ">
+      <div className="w-full Container section-padding-x ">
         <Marquee
           speed={40}
           pauseOnHover={true}

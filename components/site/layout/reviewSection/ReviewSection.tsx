@@ -12,7 +12,7 @@ interface ReviewSectionProps {
 const ReviewSection: React.FC<ReviewSectionProps> = ({ className = "" }) => {
     return (
         <section
-            className={`relative w-full overflow-hidden section-padding-x py-16 sm:py-20  ${className}`}
+            className={`relative w-full overflow-hidden  py-16 sm:py-20 ${className}`}
         >
             {/* Background Graphic */}
             <div className="absolute inset-0 z-0 pointer-events-none">
@@ -26,7 +26,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({ className = "" }) => {
             </div>
 
             {/* Inner Content */}
-            <div className="relative z-10 w-full flex flex-col">
+            <div className="relative z-10 w-full Container section-padding-x flex flex-col">
                 {/* Header: Title on Left, Description on Right */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-14 items-center justify-between">
                     <Title44 className="text-left text-[#000000] max-w-[480px]">

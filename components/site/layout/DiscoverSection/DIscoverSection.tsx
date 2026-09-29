@@ -4,7 +4,7 @@ import GridSection from "./GridSection";
 
 const DIscoverSection = () => {
   return (
-    <div className=" flex flex-col gap-16 section-padding-x ">
+    <div className="w-full  Container  flex flex-col gap-16 section-padding-x">
       <SkillsSection />
       <GridSection />
     </div>

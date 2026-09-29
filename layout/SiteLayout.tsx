@@ -8,7 +8,7 @@ interface SiteLayoutProps {
 
 const SiteLayout = ({ children }: SiteLayoutProps) => {
   return (
-    <div className="min-h-screen Container  w-full flex flex-col items-center selection:bg-[#d4fb20] selection:text-textPrimary relative overflow-x-hidden">
+    <div className="min-h-screen  w-full flex flex-col items-center selection:bg-[#d4fb20] selection:text-textPrimary relative overflow-x-hidden">
       <Navbar />
       <div className="w-full flex-1 flex flex-col">
         {children}

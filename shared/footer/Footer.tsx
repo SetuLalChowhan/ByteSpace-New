@@ -14,7 +14,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className = "" }) => {
   return (
     <footer className={`w-full bg-white pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-12  ${className}`}>
-      <div className="w-full section-padding-x s ">
+      <div className="w-full Container  section-padding-x s ">
         {/* Main Footer Top Content */}
         <div className="flex flex-col lg:flex-row justify-between gap-10 sm:gap-12 lg:gap-16">
           {/* Left Column: Brand & Newsletter */}
