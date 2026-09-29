@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import Hero from "@/components/site/layout/Hero";
-import BrandSection from "@/components/site/layout/BrandSection";
-import DIscoverSection from "@/components/site/layout/DIscoverSection";
-import ExploreDiversSection from "@/components/site/layout/ExploreDiversSection";
-import ProfessinalSection from "@/components/site/layout/ProfessinalSection";
+import Hero from "@/components/site/layout/Hero/Hero";
+import BrandSection from "@/components/site/layout/BrandSection/BrandSection";
+import DIscoverSection from "@/components/site/layout/DiscoverSection/DIscoverSection";
+import ExploreDiversSection from "@/components/site/layout/ExploreDiverSection/ExploreDiversSection";
+import ProfessinalSection from "@/components/site/layout/ProfessionalSection/ProfessinalSection";
+import CtaSection from "@/components/site/layout/CtaSection/CtaSection";
 
 
 export const metadata: Metadata = {
@@ -34,7 +35,7 @@ const Page = () => {
       <DIscoverSection />
       <ExploreDiversSection />
       <ProfessinalSection />
-
+      <CtaSection />
     </main>
   );
 };

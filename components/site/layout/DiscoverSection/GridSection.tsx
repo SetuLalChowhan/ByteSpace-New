@@ -22,6 +22,7 @@ const GridSection: React.FC<GridSectionProps> = ({ className = "" }) => {
             memberCount={course.memberCount}
             price={course.price}
             billingPeriod={course.billingPeriod}
+            tags={course.tags}
           />
         ))}
       </div>

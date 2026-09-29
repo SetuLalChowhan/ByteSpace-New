@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Search from "./Search";
+import Search from "@/components/common/Search";
 import { Title72, Title18 } from "@/components/common/Typho";
 import HappyStudentsCard from "./HappyStudentsCard";
 import LearningProgressCard from "./LearningProgressCard";
@@ -22,7 +22,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Body Content (SSR - Natural height on mobile, full viewport on desktop) */}
-      <div className="relative z-10 w-full flex flex-col items-center flex-1 justify-between pt-20 md:pt-32 section-padding-x overflow-hidden">
+      <div className="relative z-10 w-full flex flex-col items-center flex-1 justify-between pt-16 sm:pt-20 md:pt-32 section-padding-x overflow-hidden">
         {/* Banner Section (Title, Subtitle, Search) */}
         <div className="w-full max-w-[1040px] text-center flex flex-col items-center">
           {/* Main Title (Poppins 72px) */}
@@ -48,9 +48,9 @@ const Hero = () => {
         </div>
 
         {/* Avatar & Floating Badges Section */}
-        <div className="relative w-full max-w-135 sm:max-w-155 lg:max-w-170 flex justify-center items-end mt-8 lg:mt-auto pt-4">
+        <div className="relative w-full max-w-[320px] xs:max-w-135 sm:max-w-155 lg:max-w-170 flex justify-center items-end mt-6 sm:mt-8 lg:mt-auto pt-4">
           {/* Main Avatar Person (Resting at bottom edge) */}
-          <div className="relative z-10  flex items-end">
+          <div className="relative z-10 flex items-end">
             <Image
               src={avatarImg}
               alt="ByteSpace Student with Laptop"
@@ -60,10 +60,10 @@ const Hero = () => {
           </div>
 
           {/* Floating Card 1: Happy Students */}
-          <HappyStudentsCard className="absolute -left-2.5 xs:left-0 sm:-left-5 md:-left-8.75 lg:-left-20 bottom-[26%] sm:bottom-[28%] md:bottom-[16%] z-20 w-full max-w-[258px]" />
+          <HappyStudentsCard className="absolute -left-1 xs:-left-2 sm:-left-5 md:-left-8.75 lg:-left-20 bottom-[12%] xs:bottom-[16%] sm:bottom-[24%] md:bottom-[16%] z-20 w-[145px] xs:w-[175px] sm:w-[215px] md:w-full md:max-w-[258px]" />
 
           {/* Floating Card 2: Learning Progress */}
-          <LearningProgressCard className="absolute -right-2.5 xs:right-0 sm:-right-3.75 md:-right-6.25 lg:-right-8.7 top-[22%] sm:top-[24%] md:top-[22%] z-20 w-full max-w-[232px]" />
+          <LearningProgressCard className="absolute -right-1 xs:-right-2 sm:-right-3.75 md:-right-6.25 lg:-right-8.7 top-[16%] xs:top-[18%] sm:top-[22%] md:top-[22%] z-20 w-[125px] xs:w-[145px] sm:w-[185px] md:w-full md:max-w-[232px]" />
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ interface SearchProps {
   className?: string;
 }
 
-const Search: React.FC<SearchProps> = ({ className = "" }) => {
+export const Search: React.FC<SearchProps> = ({ className = "" }) => {
   const { register, handleSubmit } = useForm<SearchFormValues>({
     defaultValues: {
       query: "",
