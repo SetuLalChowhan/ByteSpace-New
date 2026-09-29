@@ -4,6 +4,7 @@ import BrandSection from "@/components/site/layout/BrandSection/BrandSection";
 import DIscoverSection from "@/components/site/layout/DiscoverSection/DIscoverSection";
 import ExploreDiversSection from "@/components/site/layout/ExploreDiverSection/ExploreDiversSection";
 import ProfessinalSection from "@/components/site/layout/ProfessionalSection/ProfessinalSection";
+import ReviewSection from "@/components/site/layout/reviewSection/ReviewSection";
 import CtaSection from "@/components/site/layout/CtaSection/CtaSection";
 
 
@@ -29,13 +30,14 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <main className="w-full Container">
+    <main className="w-full ">
       <Hero />
       <BrandSection />
       <DIscoverSection />
       <ExploreDiversSection />
       <ProfessinalSection />
       <CtaSection />
+      <ReviewSection />
     </main>
   );
 };

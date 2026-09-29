@@ -10,6 +10,10 @@ import m2 from "@/assets/m2.png";
 import m3 from "@/assets/m3.png";
 import m4 from "@/assets/m4.png";
 
+import review1 from "@/assets/review1.png";
+import review2 from "@/assets/review2.png";
+import review3 from "@/assets/review3.png";
+
 import {
   DesignSvg,
   DevelopmentSvg,
@@ -133,4 +137,61 @@ export const exploreCategoriesData = [
     title: "Photography",
     Icon: PhotographySvg,
   },
+];
+
+export const reviewsData = [
+  {
+    id: 1,
+    name: "Sarah M.",
+    role: "Enthusiastic Learner",
+    avatar: review1,
+    review:
+      '"ByteSpace has transformed my approach to learning. The diverse range of courses and the quality of content provided by creators have exceeded my expectations. The platform truly fosters a sense of community and lifelong learning."',
+  },
+  {
+    id: 2,
+    name: "James L.",
+    role: "Lifelong Learner",
+    avatar: review2,
+    review:
+      '"I\'ve tried several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development."',
+  },
+  {
+    id: 3,
+    name: "Alex B.",
+    role: "Inspired Creator",
+    avatar: review3,
+    review:
+      '"As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It\'s fulfilling to see my courses making a positive impact on learners globally."',
+  },
+];
+
+export const footerColumns = [
+  [
+    { name: "Featured Courses", href: "#" },
+    { name: "Featured Categories", href: "#" },
+    { name: "Business", href: "#" },
+    { name: "IT", href: "#" },
+    { name: "Design", href: "#" },
+  ],
+  [
+    { name: "Development", href: "#" },
+    { name: "Marketing", href: "#" },
+    { name: "Photography", href: "#" },
+    { name: "Finance", href: "#" },
+    { name: "Sport", href: "#" },
+  ],
+  [
+    { name: "Become a Creator", href: "#" },
+    { name: "Affiliate Program", href: "#" },
+    { name: "Contact", href: "#" },
+    { name: "Help", href: "#" },
+    { name: "About", href: "#" },
+  ],
+];
+
+export const footerBottomLinks = [
+  { name: "Privacy Policy", href: "#" },
+  { name: "Terms of Service", href: "#" },
+  { name: "Cookies Settings", href: "#" },
 ];

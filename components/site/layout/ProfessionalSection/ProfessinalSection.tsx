@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Title44, Title18 } from "@/components/common/Typho";
 import { CheckCircleSvg } from "@/components/common/CustomSvg";
 import ProfessionalStats from "./ProfessionalStats";
 
@@ -23,7 +24,7 @@ const ProfessinalSection: React.FC<ProfessinalSectionProps> = ({
 }) => {
   return (
     <section
-      className={`relative w-full overflow-hidden  my-8 sm:my-14 ${className}`}
+      className={`relative w-full overflow-hidden my-8 sm:my-14 ${className}`}
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -41,17 +42,17 @@ const ProfessinalSection: React.FC<ProfessinalSectionProps> = ({
         {/* ROW 1: Your Path to Professional Growth */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-14 items-center">
           {/* Left Text & Stats Column */}
-          <div className="flex flex-col l">
-            <h2 className="font-poppins text-[28px] xs:text-[34px] sm:text-[40px] lg:text-[44px] font-semibold leading-[120%] tracking-[-0.44px] text-[#242528]">
+          <div className="flex flex-col">
+            <Title44 className="text-left text-[#242528]">
               Your Path to Professional Growth Starts Here!
-            </h2>
-            <p className="mt-4 sm:mt-5 font-satoshi text-[15px] sm:text-[17px] lg:text-[18px] font-normal leading-[160%] text-[#4B4C53] max-w-[540px]">
+            </Title44>
+            <Title18 className="text-left text-[#4B4C53]! max-w-[540px] mt-4 sm:mt-5">
               Explore our curated selection of courses tailored to enhance your
               capabilities and accelerate your career journey. Whether you are
               looking to sharpen specific skills, gain industry expertise, or
               embark on a new career path entirely, we have the resources you
               need.
-            </p>
+            </Title18>
 
             {/* Separate Animated Stats Section with react-countup */}
             <div className="mt-8 sm:mt-10">
@@ -84,14 +85,14 @@ const ProfessinalSection: React.FC<ProfessinalSectionProps> = ({
 
           {/* Right Text & Checklist Column */}
           <div className="flex flex-col order-1 lg:order-2">
-            <h2 className="font-poppins text-[28px] xs:text-[34px] sm:text-[40px] lg:text-[44px] font-semibold leading-[120%] tracking-[-0.44px] text-[#242528]">
+            <Title44 className="text-left text-[#242528]">
               Create & Manage Courses Easily.
-            </h2>
-            <p className="mt-4 sm:mt-5 font-satoshi text-[15px] sm:text-[17px] lg:text-[18px] font-normal leading-[160%] text-[#4B4C53] max-w-[540px]">
+            </Title44>
+            <Title18 className="text-left text-[#4B4C53]! max-w-[540px] mt-4 sm:mt-5">
               <span className="font-bold text-[#242528]">ByteSpace</span>{" "}
               supports individuals or entities in the creation, publication, and
               administration of educational courses.
-            </p>
+            </Title18>
 
             {/* Checklist */}
             <div className="mt-7 sm:mt-8 flex flex-col gap-3.5 sm:gap-4">

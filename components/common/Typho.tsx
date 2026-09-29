@@ -71,6 +71,19 @@ export const Title16 = ({ className = "", children }: TypographyProps) => {
 };
 
 /**
+ * Title14 (Body S / Footer link): Defaults to body Satoshi font 14px
+ */
+export const Title14 = ({ className = "", children }: TypographyProps) => {
+  return (
+    <span
+      className={`font-satoshi text-[14px] font-normal leading-[160%] text-[#242528] ${className}`}
+    >
+      {children}
+    </span>
+  );
+};
+
+/**
  * Title12 (Body XS / Label XS): Defaults to body Satoshi font 12px
  */
 export const Title12 = ({ className = "", children }: TypographyProps) => {
