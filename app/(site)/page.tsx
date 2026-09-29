@@ -5,6 +5,7 @@ import DIscoverSection from "@/components/site/layout/DIscoverSection";
 import ExploreDiversSection from "@/components/site/layout/ExploreDiversSection";
 import ProfessinalSection from "@/components/site/layout/ProfessinalSection";
 
+
 export const metadata: Metadata = {
   title: "ByteSpace - Get Access to Hundreds Courses Available",
   description:
