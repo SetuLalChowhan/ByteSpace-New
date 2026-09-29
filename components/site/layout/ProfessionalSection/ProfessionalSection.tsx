@@ -38,7 +38,7 @@ const ProfessinalSection: React.FC<ProfessinalSectionProps> = ({
       </div>
 
       {/* Inner Content */}
-      <div className="relative z-10 w-full Container section-padding-x py-14 sm:py-18 md:py-24 flex flex-col gap-16 sm:gap-20">
+      <div className="relative z-10 w-full Container section-padding-x py-14 sm:py-18 md:py-24 flex flex-col ">
         {/* ROW 1: Your Path to Professional Growth */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-14 items-center">
           {/* Left Text & Stats Column */}

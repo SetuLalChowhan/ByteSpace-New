@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import SectionHeader from "@/components/common/SectionHeader";
 
-const skills = [
+const skills: string[] = [
   "Featured",
   "Music",
   "Drawing & Painting",
@@ -29,7 +29,7 @@ interface SkillsSectionProps {
 }
 
 const SkillsSection: React.FC<SkillsSectionProps> = ({ className = "" }) => {
-  const [activeSkill, setActiveSkill] = useState("Featured");
+  const [activeSkill, setActiveSkill] = useState<string>("Featured");
 
   return (
     <section
@@ -48,7 +48,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ className = "" }) => {
 
       {/* Skills Category Chips */}
       <div className="mt-7 xs:mt-9 sm:mt-10 md:mt-12 w-full max-w-[1260px] mx-auto flex flex-wrap items-center justify-center gap-x-2.5 xs:gap-x-3 sm:gap-x-3.5 md:gap-x-4 gap-y-3 xs:gap-y-3.5 sm:gap-y-4 md:gap-y-4.5">
-        {skills.map((skill) => {
+        {skills.map((skill: string) => {
           const isActive = activeSkill === skill;
           return (
             <button
