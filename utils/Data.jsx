@@ -1,18 +1,18 @@
-import s1 from "@/assets/s1.png";
-import s2 from "@/assets/s2.png";
-import s3 from "@/assets/s3.png";
-import s4 from "@/assets/s4.png";
-import s5 from "@/assets/s5.png";
-import s6 from "@/assets/s6.png";
+import s1 from "@/assets/courses/s1.png";
+import s2 from "@/assets/courses/s2.png";
+import s3 from "@/assets/courses/s3.png";
+import s4 from "@/assets/courses/s4.png";
+import s5 from "@/assets/courses/s5.png";
+import s6 from "@/assets/courses/s6.png";
 
-import m1 from "@/assets/m1.png";
-import m2 from "@/assets/m2.png";
-import m3 from "@/assets/m3.png";
-import m4 from "@/assets/m4.png";
+import m1 from "@/assets/courses/m1.png";
+import m2 from "@/assets/courses/m2.png";
+import m3 from "@/assets/courses/m3.png";
+import m4 from "@/assets/courses/m4.png";
 
-import review1 from "@/assets/review1.png";
-import review2 from "@/assets/review2.png";
-import review3 from "@/assets/review3.png";
+import review1 from "@/assets/review/review1.png";
+import review2 from "@/assets/review/review2.png";
+import review3 from "@/assets/review/review3.png";
 
 import {
   DesignSvg,
@@ -168,7 +168,7 @@ export const reviewsData = [
 
 export const footerColumns = [
   [
-    { name: "Featured Courses", href: "#" },
+    { name: "Featured Courses", href: "/courses" },
     { name: "Featured Categories", href: "#" },
     { name: "Business", href: "#" },
     { name: "IT", href: "#" },
@@ -182,7 +182,7 @@ export const footerColumns = [
     { name: "Sport", href: "#" },
   ],
   [
-    { name: "Become a Creator", href: "#" },
+    { name: "Become a Creator", href: "/register" },
     { name: "Affiliate Program", href: "#" },
     { name: "Contact", href: "#" },
     { name: "Help", href: "#" },

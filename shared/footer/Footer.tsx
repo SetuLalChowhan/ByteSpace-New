@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Title14 } from "@/components/common/Typho";
 import { footerColumns, footerBottomLinks } from "@/utils/Data";
-import footerLogo from "@/assets/footerLogo.png";
+import footerLogo from "@/assets/shared/footerLogo.png";
 
 interface FooterProps {
   className?: string;

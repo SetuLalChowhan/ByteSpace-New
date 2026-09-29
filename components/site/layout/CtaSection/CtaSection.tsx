@@ -1,7 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Title44, Title18 } from "@/components/common/Typho";
-import ctaBg from "@/assets/ctaBg.png";
+import { MotionFade } from "@/components/common/MotionWrapper";
+import ctaBg from "@/assets/cta/ctaBg.png";
 
 interface CtaSectionProps {
     className?: string;
@@ -41,14 +43,14 @@ const CtaSection: React.FC<CtaSectionProps> = ({ className = "" }) => {
                 </Title18>
 
                 {/* Action Button */}
-                <div className="mt-6 sm:mt-8">
-                    <button
-                        type="button"
-                        className="rounded-[24px] bg-primary px-6 sm:px-8 py-3.5 sm:py-4 font-satoshi font-medium text-[16px] sm:text-[18px] leading-[120%] text-textPrimary transition-all duration-300 active:scale-95 cursor-pointer shadow-md hover:opacity-95"
+                <MotionFade delay={0.15} className="mt-6 sm:mt-8">
+                    <Link
+                        href="/register"
+                        className="inline-block rounded-[24px] bg-primary px-6 sm:px-8 py-3.5 sm:py-4 font-satoshi font-medium text-[16px] sm:text-[18px] leading-[120%] text-textPrimary transition-all duration-300 active:scale-95 cursor-pointer shadow-md hover:opacity-95"
                     >
                         Join as Creator
-                    </button>
-                </div>
+                    </Link>
+                </MotionFade>
             </div>
         </section>
     );

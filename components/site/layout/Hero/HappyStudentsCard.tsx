@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import peoplesImg from "@/assets/peoples.png";
+import peoplesImg from "@/assets/hero/peoples.png";
 
 interface HappyStudentsCardProps {
   className?: string;

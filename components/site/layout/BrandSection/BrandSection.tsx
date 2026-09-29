@@ -3,11 +3,11 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Marquee from "react-fast-marquee";
-import b1 from "@/assets/b1.png";
-import b2 from "@/assets/b2.png";
-import b3 from "@/assets/b3.png";
-import b4 from "@/assets/b4.png";
-import b5 from "@/assets/b5.png";
+import b1 from "@/assets/brand/b1.png";
+import b2 from "@/assets/brand/b2.png";
+import b3 from "@/assets/brand/b3.png";
+import b4 from "@/assets/brand/b4.png";
+import b5 from "@/assets/brand/b5.png";
 
 interface BrandLogo {
   src: StaticImageData;

@@ -4,7 +4,7 @@ import Search from "@/components/common/Search";
 import { Title72, Title18 } from "@/components/common/Typho";
 import HeroFloatingShapes from "./HeroFloatingShapes";
 import HeroAvatarSection from "./HeroAvatarSection";
-import heroBgGrid from "@/assets/heroBG2.png";
+import heroBgGrid from "@/assets/hero/heroBG2.png";
 
 const Hero = () => {
   return (

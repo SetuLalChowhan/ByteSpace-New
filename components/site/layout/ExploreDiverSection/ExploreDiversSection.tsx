@@ -2,6 +2,7 @@ import React from "react";
 import SectionHeader from "@/components/common/SectionHeader";
 import CategoryCard from "@/components/cards/CategoryCard";
 import { exploreCategoriesData } from "@/utils/Data";
+import { MotionStagger, MotionItem } from "@/components/common/MotionWrapper";
 
 interface ExploreDiversSectionProps {
   className?: string;
@@ -21,15 +22,19 @@ const ExploreDiversSection: React.FC<ExploreDiversSectionProps> = ({
       />
 
       {/* Categories Grid */}
-      <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 xs:gap-3.5 sm:gap-4 md:gap-5 lg:gap-6">
+      <MotionStagger
+        staggerDelay={0.1}
+        className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 xs:gap-3.5 sm:gap-4 md:gap-5 lg:gap-6"
+      >
         {exploreCategoriesData.map((category) => (
-          <CategoryCard
-            key={category.id}
-            title={category.title}
-            Icon={category.Icon}
-          />
+          <MotionItem key={category.id} className="h-full">
+            <CategoryCard
+              title={category.title}
+              Icon={category.Icon}
+            />
+          </MotionItem>
         ))}
-      </div>
+      </MotionStagger>
     </section>
   );
 };

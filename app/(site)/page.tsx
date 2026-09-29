@@ -6,7 +6,7 @@ import ExploreDiversSection from "@/components/site/layout/ExploreDiverSection/E
 import ProfessinalSection from "@/components/site/layout/ProfessionalSection/ProfessionalSection";
 import ReviewSection from "@/components/site/layout/reviewSection/ReviewSection";
 import CtaSection from "@/components/site/layout/CtaSection/CtaSection";
-
+import { MotionSection } from "@/components/common/MotionWrapper";
 
 export const metadata: Metadata = {
   title: "ByteSpace - Get Access to Hundreds Courses Available",
@@ -30,14 +30,26 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <main className="w-full ">
+    <main className="w-full">
       <Hero />
-      <BrandSection />
-      <DIscoverSection />
-      <ExploreDiversSection />
-      <ProfessinalSection />
-      <CtaSection />
-      <ReviewSection />
+      <MotionSection>
+        <BrandSection />
+      </MotionSection>
+      <MotionSection>
+        <DIscoverSection />
+      </MotionSection>
+      <MotionSection>
+        <ExploreDiversSection />
+      </MotionSection>
+      <MotionSection>
+        <ProfessinalSection />
+      </MotionSection>
+      <MotionSection>
+        <CtaSection />
+      </MotionSection>
+      <MotionSection>
+        <ReviewSection />
+      </MotionSection>
     </main>
   );
 };

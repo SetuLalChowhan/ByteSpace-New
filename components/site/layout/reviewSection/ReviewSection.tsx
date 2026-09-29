@@ -3,7 +3,8 @@ import Image from "next/image";
 import ReviewCard from "@/components/cards/ReviewCard";
 import { reviewsData } from "@/utils/Data";
 import { Title44, Title18 } from "@/components/common/Typho";
-import reviewBg from "@/assets/reviewBg.png";
+import { MotionStagger, MotionItem } from "@/components/common/MotionWrapper";
+import reviewBg from "@/assets/review/reviewBg.png";
 
 interface ReviewSectionProps {
     className?: string;
@@ -45,17 +46,21 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({ className = "" }) => {
                 </div>
 
                 {/* Reviews 3-Column Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 w-full mt-10 sm:mt-14 md:mt-16">
+                <MotionStagger
+                    staggerDelay={0.14}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8 w-full mt-10 sm:mt-14 md:mt-16"
+                >
                     {reviewsData.map((item) => (
-                        <ReviewCard
-                            key={item.id}
-                            name={item.name}
-                            role={item.role}
-                            avatar={item.avatar}
-                            review={item.review}
-                        />
+                        <MotionItem key={item.id} className="h-full flex">
+                            <ReviewCard
+                                name={item.name}
+                                role={item.role}
+                                avatar={item.avatar}
+                                review={item.review}
+                            />
+                        </MotionItem>
                     ))}
-                </div>
+                </MotionStagger>
             </div>
         </section>
     );

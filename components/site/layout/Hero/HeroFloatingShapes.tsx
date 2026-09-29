@@ -4,13 +4,12 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// Floating 3D decorative shapes
-import leftSpringImg from "@/assets/leftSpring.png";
-import whiteSpringLeftImg from "@/assets/whiteSPring.png";
-import bottomWhiteCircleImg from "@/assets/bottomWhiteCircle.png";
-import rightCylinderImg from "@/assets/rightSilinder.png";
-import whiteConeImg from "@/assets/whiteHatMask.png";
-import bottomRightSpringImg from "@/assets/bottomRightSpringWHite.png";
+import leftSpringImg from "@/assets/hero/leftSpring.png";
+import whiteSpringLeftImg from "@/assets/hero/whiteSPring.png";
+import bottomWhiteCircleImg from "@/assets/hero/bottomWhiteCircle.png";
+import rightCylinderImg from "@/assets/hero/rightSilinder.png";
+import whiteConeImg from "@/assets/hero/whiteHatMask.png";
+import bottomRightSpringImg from "@/assets/hero/bottomRightSpringWHite.png";
 
 export const HeroFloatingShapes: React.FC = () => {
   return (

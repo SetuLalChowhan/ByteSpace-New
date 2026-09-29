@@ -3,24 +3,26 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
-import logoImg from "@/assets/logo.png";
+import logoImg from "@/assets/shared/logo.png";
 import { ShopSvg } from "@/components/common/CustomSvg";
 import MobileNavMenu from "./MobileNavMenu";
-
-const navItems = [
-  { label: "Home", href: "/", active: true },
-  { label: "Courses", href: "/courses", active: false },
-  { label: "Creators", href: "/creators", active: false },
-];
 
 interface NavbarProps {
   className?: string;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const navItems = [
+    { label: "Home", href: "/", active: pathname === "/" },
+    { label: "Courses", href: "/courses", active: pathname.startsWith("/courses") },
+    { label: "Creators", href: "/creators", active: pathname.startsWith("/creators") },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,13 +74,13 @@ const Navbar: React.FC<NavbarProps> = ({ className = "" }) => {
         {/* Right Nav Actions (Desktop) */}
         <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           <Link
-            href="/signin"
+            href="/login"
             className="text-[16px] font-normal leading-[160%] text-[#F5F5F6] hover:text-white transition-colors"
           >
             Sign In
           </Link>
           <Link
-            href="/join"
+            href="/register"
             className="text-[16px] font-normal leading-[160%] text-[#F5F5F6] hover:text-white transition-colors"
           >
             Join Us

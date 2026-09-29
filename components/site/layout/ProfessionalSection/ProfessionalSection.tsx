@@ -4,9 +4,9 @@ import { Title44, Title18 } from "@/components/common/Typho";
 import { CheckCircleSvg } from "@/components/common/CustomSvg";
 import ProfessionalStats from "./ProfessionalStats";
 
-import ProfessinalBg from "@/assets/ProfessinalBg.png";
-import rowOneImage from "@/assets/rowOneImage.png";
-import rowTwoImage from "@/assets/rowTwoImage.png";
+import ProfessinalBg from "@/assets/professional/ProfessinalBg.png";
+import rowOneImage from "@/assets/professional/rowOneImage.png";
+import rowTwoImage from "@/assets/professional/rowTwoImage.png";
 
 const checklistItems = [
   "Share Your Expertise",

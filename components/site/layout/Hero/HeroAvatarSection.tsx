@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import HappyStudentsCard from "./HappyStudentsCard";
 import LearningProgressCard from "./LearningProgressCard";
 
-import circleArch from "@/assets/circle1.png";
-import avatarImg from "@/assets/Avatar.png";
+import circleArch from "@/assets/hero/circle1.png";
+import avatarImg from "@/assets/hero/Avatar.png";
 
 export const HeroAvatarSection: React.FC = () => {
   return (
@@ -42,37 +42,21 @@ export const HeroAvatarSection: React.FC = () => {
         />
       </motion.div>
 
-      {/* Floating Card 1: Happy Students (Enters smoothly from left, then gently floats) */}
+      {/* Card 1: Happy Students (Enters smoothly to fixed position) */}
       <motion.div
-        initial={{ opacity: 0, x: -70, y: 20 }}
-        animate={{
-          opacity: 1,
-          x: 0,
-          y: [0, -6, 0, 6, 0],
-        }}
-        transition={{
-          opacity: { duration: 0.85, delay: 0.55, ease: [0.16, 1, 0.3, 1] },
-          x: { duration: 0.85, delay: 0.55, ease: [0.16, 1, 0.3, 1] },
-          y: { duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1.4 },
-        }}
+        initial={{ opacity: 0, x: -50, y: 20 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 0.85, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
         className="absolute -left-1 xs:-left-2 sm:-left-5 md:-left-8.75 lg:-left-20 bottom-[12%] xs:bottom-[16%] sm:bottom-[24%] md:bottom-[16%] z-20 w-[145px] xs:w-[175px] sm:w-[215px] md:w-full md:max-w-[258px]"
       >
         <HappyStudentsCard />
       </motion.div>
 
-      {/* Floating Card 2: Learning Progress (Enters smoothly from right, then gently floats) */}
+      {/* Card 2: Learning Progress (Enters smoothly to fixed position) */}
       <motion.div
-        initial={{ opacity: 0, x: 70, y: -20 }}
-        animate={{
-          opacity: 1,
-          x: 0,
-          y: [0, 6, 0, -6, 0],
-        }}
-        transition={{
-          opacity: { duration: 0.85, delay: 0.65, ease: [0.16, 1, 0.3, 1] },
-          x: { duration: 0.85, delay: 0.65, ease: [0.16, 1, 0.3, 1] },
-          y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 },
-        }}
+        initial={{ opacity: 0, x: 50, y: -20 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 0.85, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
         className="absolute -right-1 xs:-right-2 sm:-right-3.75 md:-right-6.25 lg:-right-8.7 top-[16%] xs:top-[18%] sm:top-[22%] md:top-[22%] z-20 w-[125px] xs:w-[145px] sm:w-[185px] md:w-full md:max-w-[232px]"
       >
         <LearningProgressCard />
